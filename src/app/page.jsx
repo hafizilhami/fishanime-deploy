@@ -3,7 +3,8 @@ import Header from "@/app/components/AnimeList/Header";
 
 const Page = async () => {
 
-  const respon = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?limit=8`)
+  const respon = await fetch("https://api.jikan.moe/v4/top/anime?limit=8")
+
   const topAnime = await respon.json()
 
   return (

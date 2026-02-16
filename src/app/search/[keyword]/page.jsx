@@ -7,9 +7,9 @@ export default async function Page({ params }) {
   const decodedKeyword = decodeURIComponent(keyword);
 
   const respon = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/anime?q=${decodedKeyword}`,
-    { cache: "no-store" }
-  );
+  `https://api.jikan.moe/v4/anime?q=${decodedKeyword}`,
+  { cache: "no-store" }
+);
 
   const searchAnime = await respon.json();
 

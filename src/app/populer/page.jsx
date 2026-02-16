@@ -11,7 +11,7 @@ const page = () => {
 
   const fetchData = async () => {
     const respon = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?page=${page}`)
+      `https://api.jikan.moe/v4/top/anime?page=${page}`)
     const data = await respon.json()
     setTopAnime(data)
   }
