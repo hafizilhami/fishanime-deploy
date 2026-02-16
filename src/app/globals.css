@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+   /* Navbar Colors */
+  --color-navbar-bg: #0f172a;        /* slate-900 */
+  --color-navbar-text: #f8fafc;      /* slate-50 */
+  --color-navbar-hover: #1e293b;     /* slate-800 */
+  --color-navbar-accent: #3b82f6;    /* blue-500 */
+  --radius-navbar: 12px;
+  --color-primary: #2563eb;
+  --color-background: white;
+  --color-foreground: black;
+}
+
+.dark {
+  --color-primary: #60a5fa;
+  --color-background: #0f172a;
+  --color-foreground: white;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+  transition: .3s ease all;
+}
+
+img:hover{
+  scale: 102%;
+}
+
+.custom-loader {
+  width:50px;
+  height:50px;
+  --c:radial-gradient(farthest-side,#60a5fa 92%,#0000);
+  background: 
+    var(--c) 50% 0,
+    var(--c) 50% 100%,
+    var(--c) 100% 50%,
+    var(--c) 0    50%;
+  background-size:12px 12px;
+  background-repeat:no-repeat;
+  animation:s7 1s infinite;
+}
+@keyframes s7 {to{transform: rotate(.5turn)}}
